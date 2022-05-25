@@ -1,0 +1,118 @@
+.header-content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../img//the-batman.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    .login-content {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        padding: 20px;
+        font-family: 'Bebas Neue', cursive;
+
+        .new-batFriend {
+            background-color: rgba(232, 0, 0, 0.737);
+            border-radius: 50px;
+            font-weight: 900;
+            transition: 1s;
+        }
+
+        .new-batFriend:hover {
+            transition: 1s;
+            background-color: rgba(0, 0, 0, 0.482);
+
+            a {
+                transition: 1s;
+            }
+        }
+
+        li {
+            margin-right: 20px;
+            list-style: none;
+            padding: 4px 40px 4px 40px;
+
+            a {
+                transition: 1s;
+                text-decoration: none;
+                color: white;
+                font-size: 1.4rem;
+            }
+        }
+
+    }
+
+    .title {
+        width: 100%;
+        top: 35%;
+        position: absolute;
+
+        h1 {
+            margin: 0px auto;
+            width: 47%;
+            letter-spacing: 30px;
+            font-family: 'Bebas Neue', cursive;
+            color: rgb(232, 0, 0);
+            font-size: 18rem;
+            text-align: center;
+            transition: 0.7s;
+            position: relative;
+        }
+
+        h1::before {
+            content: " ";
+            bottom: 23%;
+            box-shadow: black 0px 13px 10px 0px;
+            border-radius: 50%;
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            border: none;
+            background-color: transparent;
+        }
+
+        h1:hover {
+            color: white;
+            transition: 0.7s;
+        }
+    }
+}
+
+.cloud {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation: rotationLeft 80s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes rotationLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    30% {
+      transform: translate3d(60%);
+    }
+    60% {
+      transform: translate3d(40%);
+    }
+    100% {
+      transform: translate3d(-50%,0,0);
+    }
+  
+  }
+  
+  .img_cloud {
+    width: 90%;
+    opacity: 0.5;
+  }
