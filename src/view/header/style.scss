@@ -116,3 +116,11 @@
     width: 90%;
     opacity: 0.5;
   }
+
+  .black-content{
+    position: absolute;
+    bottom: -12%;
+    width: 100%;
+    height: 100px;
+    box-shadow: black 100px 0px 200px 200px;
+  }
