@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Movies from "../../data-img";
 
 
@@ -6,20 +6,21 @@ import "./style.scss"
 
 const Body = () => {
 
-    function scrollY() {
-        document.getElementById("right").addEventListener("click", () => {
-            document.getElementById("combo-cards").style.transform = "translateX(-33%)"
-        })
-    }
-    function scrollX() {
-        document.getElementById("left").addEventListener("click", () => {
-            document.getElementById("combo-cards").style.transform = "translateX(0%)"
-        })
+    const [x, setX] = useState(28)
+
+
+    const Left = () => {
+        x === 0 ? setX(-100 * (Movies.length - 1)) : setX(x + 34)
     }
 
+    const Rigth = () => {
+        x === -100 * (Movies.length - 1) ? setX(0) : setX(x - 34)
+    }
+
+
     useEffect(() => {
-        scrollX()
-        scrollY()
+        // Rigth()
+        // Left()
     })
 
     function getMovies() {
@@ -37,13 +38,13 @@ const Body = () => {
     return (
         <>
             <div className="body-content">
-                <div className="combo-cards" id="combo-cards">
+                <div className="combo-cards" id="combo-cards" style={{ transform: `translateX(${x}%)` }}>
                     {getMovies()}
                 </div>
-                <span className="material-icons left" id="right" onClick={() => scrollX()}>
+                <span className="material-icons left" id="right" onClick={Rigth}>
                     chevron_right
                 </span>
-                <span className="material-icons right" id="left" onClick={() => scrollY()}>
+                <span className="material-icons right" id="left" onClick={Left}>
                     chevron_left
                 </span>
                 <div className="block-left">
