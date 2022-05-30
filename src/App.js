@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from "./view/header/index"
-import Body from "./view/body/index"
+import MainPage from './view/main-page';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Body />
+    <div style={{background: "black"}}>
+      <MainPage />
     </div>
   );
 }

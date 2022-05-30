@@ -1,58 +1,84 @@
 import React, { useEffect, useState } from "react";
-import Movies from "../../data-img";
+import Movies from "./data-img";
+import Slide from "../image-slide";
 
 
 import "./style.scss"
 
 const Body = () => {
 
-    const [x, setX] = useState(28)
+    const [x, setX] = useState(0)
 
 
     const Left = () => {
-        x === 0 ? setX(-100 * (Movies.length - 1)) : setX(x + 34)
+        x === 0 ? setX(-75) : setX(x + 15)
     }
 
     const Rigth = () => {
-        x === -100 * (Movies.length - 1) ? setX(0) : setX(x - 34)
+        x === -75 ? setX(0) : setX(x - 15)
     }
+
+    function showY() {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY < 190) {
+                document.getElementById("slide-movies").style.transform = "translateY(0px)"
+            }
+        })
+    }
+
 
 
     useEffect(() => {
-        // Rigth()
-        // Left()
-    })
 
-    function getMovies() {
-        return Movies.map((e) => {
-            return (
-                <div key={e.id} className="card">
-                    <img src={e.src}></img>
-                    <h4>{e.name}</h4>
-                </div>
-            );
-        });
-    }
+        window.scrollTo(0, 0)
+        showY()
+    }, [])
+
 
 
     return (
-        <>
-            <div className="body-content">
-                <div className="combo-cards" id="combo-cards" style={{ transform: `translateX(${x}%)` }}>
-                    {getMovies()}
+        <div style={{ background: "black" }}>
+
+            <div className="slide-movies" id="slide-movies">
+
+
+                <div className="cards-content" id="cards-content">
+
+                    <div className="block-left">
+
+                        <span className="material-icons left" id="right" onClick={Rigth}>
+                            chevron_right
+                        </span>
+
+                    </div>
+
+
+                    <div className="combo-cards" id="combo-cards" style={{ transform: `translateX(${x}%)` }}>
+                        {Movies.map((e) => {
+                            return (
+                                <div key={e.id} className="card">
+                                    <img src={e.src}></img>
+                                    <h4>{e.name}</h4>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="block-right">
+
+                        <span className="material-icons right" id="left" onClick={Left}>
+                            chevron_left
+                        </span>
+
+                    </div>
+
                 </div>
-                <span className="material-icons left" id="right" onClick={Rigth}>
-                    chevron_right
-                </span>
-                <span className="material-icons right" id="left" onClick={Left}>
-                    chevron_left
-                </span>
-                <div className="block-left">
-                </div>
-                <div className="block-right">
-                </div>
+
             </div>
-        </>
+            
+            {<Slide />}
+        
+        </div>
     )
 }
 
