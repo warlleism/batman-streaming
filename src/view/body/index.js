@@ -19,40 +19,29 @@ const Body = () => {
     }
 
     function showY() {
+        const cards = document.getElementById("slide-movies")
         window.addEventListener("scroll", () => {
-            if (window.scrollY < 190) {
-                document.getElementById("slide-movies").style.transform = "translateY(0px)"
-            }
+            console.log(window.scrollY)
+            const comboCards = window.scrollY
+            const trasitionCardsTop = comboCards > 190 ? cards.style.transform = "translateY(0px)" : cards.style.transform = "translateY(200px)"
+            return trasitionCardsTop
         })
     }
 
-
-
     useEffect(() => {
-
         window.scrollTo(0, 0)
         showY()
     }, [])
 
-
-
     return (
         <div style={{ background: "black" }}>
-
             <div className="slide-movies" id="slide-movies">
-
-
                 <div className="cards-content" id="cards-content">
-
                     <div className="block-left">
-
                         <span className="material-icons left" id="right" onClick={Rigth}>
                             chevron_right
                         </span>
-
                     </div>
-
-
                     <div className="combo-cards" id="combo-cards" style={{ transform: `translateX(${x}%)` }}>
                         {Movies.map((e) => {
                             return (
@@ -63,21 +52,14 @@ const Body = () => {
                             );
                         })}
                     </div>
-
                     <div className="block-right">
-
                         <span className="material-icons right" id="left" onClick={Left}>
                             chevron_left
                         </span>
-
                     </div>
-
                 </div>
-
             </div>
-            
             {<Slide />}
-        
         </div>
     )
 }
