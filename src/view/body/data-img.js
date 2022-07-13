@@ -1,109 +1,126 @@
-import React from "react";
-import theBatman from "../../img/cards/the-batman.jpg"
 import batmanBegins from "../../img/cards/batman-begins.jpg"
 import batmanDarkKnight from "../../img/cards/darkKnight.jpg"
 import batmanDarkRise from "../../img/cards/batmanRise.jpg"
+import batmanRetorno from "../../img/cards/batman-o-retorno.jpg"
+import batmanRobin from "../../img/cards/Critica-Batman-Robin.jpg"
+import batmanForever from "../../img/cards/batman-forever.jpg"
+import batmanVsSuperman from "../../img/cards/BatmanVsSuperman.jpg"
+import theBatman from "../../img/cards/the-batman.jpg"
+import batman1989 from "../../img/cards/Batman1989.jpg"
+import ligaDaJustica from "../../img/cards/ligaDaJustica.jpg"
+import homemMorcego from "../../img/cards/homemMorcego.png"
+import batmanMorteDaFamilia from "../../img/cards/batmanMorteDaFamilia.png"
+import batmanSilencio from "../../img/cards/batmanSilencio.jpg"
+import batmanVsCapuzVermelho from "../../img/cards/batmanVsCapuzVermelho.png"
+import batmanAnoUm from "../../img/cards/batmanAnoUm.jpg"
+import filhoDoBatman from "../../img/cards/filhoDoBatman.png"
+import batmanVsRobin from "../../img/cards/batmanVsRobin.jpg"
+import darkKnightParte1 from "../../img/cards/darkKnightParte1.jpg"
+import darkKnightParte2 from "../../img/cards/darkKnightParte2.jpg"
+import cavaleiroDeGothan from "../../img/cards/cavaleiroDeGothan.jpg"
+
 
 const Movies = [
     {
         id: 1,
-        name: "The Batman1",
-        src:batmanBegins,
+        name: "Batman: Begins",
+        src: batmanBegins,
     },
     {
         id: 2,
-        name: "The Batman2",
-        src:batmanBegins,
+        name: "Batman: Dark Knight",
+        src:batmanDarkKnight,
     },
     {
         id: 3,
-        name: "The Batman3",
-        src: batmanBegins,
+        name: "Batman: Dark Rise",
+        src: batmanDarkRise,
     },
     {
         id: 4,
-        name: "The Batman4",
-        src: batmanBegins,
+        name: "Batman Vs Superman",
+        src: batmanVsSuperman,
     },
     {
         id: 5,
-        name: "The Batman5",
-        src: batmanBegins,
+        name: "The Batman",
+        src: theBatman,
     },
     {
         id: 6,
-        name: "The Batman6",
-        src: batmanBegins,
+        name: "Batman e Robin",
+        src: batmanRobin,
     },
     {
         id: 7,
-        name: "The Batman7",
-        src: batmanBegins,
+        name: "Batman Forever",
+        src:  batmanForever,
     },
     {
         id: 8,
-        name: "The Batman8",
-        src: batmanBegins,
+        name: "Batman: O Retorno",
+        src: batmanRetorno,
+       
     },
     {
         id: 9,
-        name: "The Batman9",
-        src: batmanBegins,
+        name: "batman 1989",
+        src: batman1989,
     },
     {
         id: 10,
-        name: "The Batman10",
-        src: batmanBegins,
+        name: "Liga Da Justica",
+        src: ligaDaJustica,
     },
     {
         id: 11,
-        name: "The Batman11",
-        src: batmanBegins,
+        name: "Batman: Homem Morcego",
+        src: homemMorcego,
     },
     {
         id: 12,
-        name: "The Batman12",
-        src: batmanBegins,
+        name: "Batman: Morte Da Familia",
+        src: batmanMorteDaFamilia,
     },
     {
         id: 13,
-        name: "The Batman13",
-        src: batmanBegins,
+        name: "Batman Silêncio",
+        src: batmanSilencio,
     },
     {
         id: 14,
-        name: "The Batman",
-        src: batmanBegins,
+        name: "Batman Vs Capuz Vermelho",
+        src: batmanVsCapuzVermelho,
     },
     {
         id: 15,
-        name: "The Batman14",
-        src: batmanBegins,
+        name: "Batman Ano Um",
+        src: batmanAnoUm,
     },
     {
         id: 16,
-        name: "The Batman15",
-        src: batmanBegins,
+        name: "Filho Do Batman",
+        src: filhoDoBatman,
     },
     {
         id: 17,
-        name: "The Batman16",
-        src: batmanBegins,
+        name: "Batman Vs Robin",
+        src: batmanVsRobin,
     },
     {
         id: 18,
-        name: "The Batman17",
-        src: batmanBegins,
+        name: "Batman Dark Knight",
+        src: darkKnightParte1,
     },
     {
         id: 19,
-        name: "The Batman18",
-        src: batmanBegins,
+        name: "Batman Dark Knight Returns",
+        src: darkKnightParte2,
     },
     {
         id: 20,
-        name: "The Batman19",
-        src: batmanBegins,
+        name: "Batman Cavaleiro De Gothan",
+        src: cavaleiroDeGothan,
     },
 
 ]

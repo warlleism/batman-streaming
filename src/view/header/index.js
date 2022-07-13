@@ -16,9 +16,7 @@ const Header = () => {
                 <div className="cloud">
                     <img src={Cloud} alt="" className="img_cloud" />
                 </div>
-                <div className="black-content">
-
-                </div>
+                <div className="black-content"></div>
             </div>
         </>
     )

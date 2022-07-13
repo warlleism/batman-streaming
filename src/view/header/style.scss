@@ -10,7 +10,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-
     .login-content {
         position: absolute;
         top: 0;
@@ -19,23 +18,19 @@
         justify-content: end;
         padding: 20px;
         font-family: 'Bebas Neue', cursive;
-
         .new-batFriend {
             background-color: rgba(232, 0, 0, 0.737);
             border-radius: 50px;
             font-weight: 900;
             transition: 1s;
         }
-
         .new-batFriend:hover {
             transition: 1s;
             background-color: rgba(0, 0, 0, 0.482);
-
             a {
                 transition: 1s;
             }
         }
-
         li {
             margin-right: 20px;
             list-style: none;
@@ -90,9 +85,9 @@
 .cloud {
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 130%;
     height: 100vh;
-    animation: rotationLeft 80s linear infinite;
+    animation: rotationLeft 50s linear infinite;
     z-index: 1;
   }
   
@@ -100,14 +95,8 @@
     0% {
       transform: translateX(100%);
     }
-    30% {
-      transform: translate3d(60%);
-    }
-    60% {
-      transform: translate3d(40%);
-    }
     100% {
-      transform: translate3d(-50%,0,0);
+      transform: translate3d(-90%,0,0);
     }
   
   }

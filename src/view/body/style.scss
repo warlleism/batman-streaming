@@ -5,17 +5,15 @@
     transform: translateY(200px);
     transition: 2s;
     box-shadow: black 0px 30px 100px 140px;
-
     .cards-content {
         width: 400%;
         height: 100%;
         background-color: black;
         display: flex;
-
         .block-left {
             position: absolute;
             right: 0%;
-            top: 0%;
+            top: 26%;
             background-color: rgb(0, 0, 0);
             width: 60px;
             height: 370px;
@@ -23,7 +21,7 @@
             .left {
                 z-index: 9999999;
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 right: -30%;
                 padding: 20px;
                 color: rgb(255, 0, 0);
@@ -35,7 +33,7 @@
         .block-right {
             position: absolute;
             left: 0%;
-            top: 0%;
+            top: 26%;
             background-color: rgb(0, 0, 0);
             width: 60px;
             height: 370px;
@@ -43,7 +41,7 @@
             .right {
                 z-index: 9999999;
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 left: -35%;
                 color: rgb(255, 0, 0);
                 font-size: 4rem;
@@ -51,22 +49,22 @@
                 padding: 20px;
             }
         }
-
-
         .combo-cards {
             display: flex;
             margin-top: 140px;
             transition: 0.9s ease-in-out;
 
             .card {
+                width: 290px;
+                height: 350px;
                 transform: translateX(60px);
                 display: flex;
                 flex-direction: column;
                 margin: 0px 0px 0px 20px;
 
                 img {
-                    max-width: 100%;
-                    height: 200px;
+                    width: 100%;
+                    height: 90%;
                     border-radius: 4px;
                 }
 

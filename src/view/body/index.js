@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Movies from "./data-img";
 import Slide from "../image-slide";
 
-
 import "./style.scss"
 
 const Body = () => {
@@ -11,17 +10,17 @@ const Body = () => {
 
 
     const Left = () => {
-        x === 0 ? setX(-75) : setX(x + 15)
+        x === 0 ? setX(-72) : setX(x + 12)
     }
 
     const Rigth = () => {
-        x === -75 ? setX(0) : setX(x - 15)
+        x === -72 ? setX(0) : setX(x - 12)
     }
 
     function showY() {
         const cards = document.getElementById("slide-movies")
         window.addEventListener("scroll", () => {
-            console.log(window.scrollY)
+            // console.log(window.scrollY)
             const comboCards = window.scrollY
             const trasitionCardsTop = comboCards > 190 ? cards.style.transform = "translateY(0px)" : cards.style.transform = "translateY(200px)"
             return trasitionCardsTop
@@ -35,6 +34,7 @@ const Body = () => {
 
     return (
         <div style={{ background: "black" }}>
+            {console.log(x)}
             <div className="slide-movies" id="slide-movies">
                 <div className="cards-content" id="cards-content">
                     <div className="block-left">
